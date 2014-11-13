@@ -40,9 +40,18 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/editText2"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_below="@+id/ratingBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="en liten liten penis"
+        android:id="@+id/textView2"
         android:layout_below="@+id/ratingBar"
-        android:layout_alignParentRight="true" />
+        android:layout_marginTop="116dp"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
