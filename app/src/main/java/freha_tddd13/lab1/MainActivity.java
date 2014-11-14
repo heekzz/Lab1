@@ -3,7 +3,6 @@ package freha_tddd13.lab1;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
@@ -35,19 +34,27 @@ public class MainActivity extends Activity {
         textField1.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         textField1.setMaxLines(1);
 
+
+        // MultiLine
+        EditText textField2 = new EditText(this);
+        textField2.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
         // Ratingbar
         RatingBar rate = new RatingBar(this);
         rate.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        rate.setLayoutParams(new ActionBar.LayoutParams(Gravity.CENTER_HORIZONTAL));
 
-        // MultiLine
-        EditText multiLine = new EditText(this);
-        multiLine.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        Button button1 = new Button(this);
+        button1.setText("Knappeliknapp");
+        button.setLayoutParams(new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
+
+        Button button2 = new Button(this);
+        button2.setText("Knappeliknapp");
+        button.setLayoutParams(new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
 
         linearLayout.addView(button);
         linearLayout.addView(textField1);
         linearLayout.addView(rate);
-        linearLayout.addView(multiLine);
+        linearLayout.addView(textField2);
         setContentView(linearLayout);
     }
 
