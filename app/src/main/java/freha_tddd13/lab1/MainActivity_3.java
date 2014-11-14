@@ -1,9 +1,8 @@
 package freha_tddd13.lab1;
 
 import android.app.Activity;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
@@ -16,7 +15,6 @@ import android.widget.TextView;
 
 public class MainActivity_3 extends Activity {
 
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         LinearLayout layout = new LinearLayout(this);
@@ -25,14 +23,16 @@ public class MainActivity_3 extends Activity {
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT));
 
-        LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
+
 
         //rad 1 - hur trivs du på LIU
         TextView text1 = new TextView(this);
         text1.setText("Hur trivs du på LIU");
-        text1.setLayoutParams(lparams);
+        text1.setLayoutParams(params);
+        text1.setGravity(Gravity.CENTER);
 
         RadioButton rbutton = new RadioButton(this);
         rbutton.setText("Bra");
@@ -42,7 +42,7 @@ public class MainActivity_3 extends Activity {
         rbutton3.setText("Jättebra");
 
         RadioGroup group1 = new RadioGroup(this);
-        group1.setLayoutParams(lparams);
+        group1.setLayoutParams(params);
         group1.setOrientation(LinearLayout.HORIZONTAL);
         group1.addView(rbutton);
         group1.addView(rbutton3);
@@ -51,7 +51,8 @@ public class MainActivity_3 extends Activity {
         //rad 2 - Läser du på LITH
         TextView text2 = new TextView(this);
         text2.setText("Läser du på LITH");
-        text2.setLayoutParams(lparams);
+        text2.setLayoutParams(params);
+        text2.setGravity(Gravity.CENTER);
 
         RadioButton rbutton4 = new RadioButton(this);
         rbutton4.setText("Ja");
@@ -59,7 +60,7 @@ public class MainActivity_3 extends Activity {
         rbutton5.setText("Nej");
 
         RadioGroup group2 = new RadioGroup(this);
-        group2.setLayoutParams(lparams);
+        group2.setLayoutParams(params);
         group2.setOrientation(LinearLayout.HORIZONTAL);
         group2.addView(rbutton4);
         group2.addView(rbutton5);
@@ -67,16 +68,26 @@ public class MainActivity_3 extends Activity {
         //rad 3 - LOGO
         TextView text3 = new TextView(this);
         text3.setText("Är detta LIUs logotyp");
+        text3.setLayoutParams(params);
+        text3.setGravity(Gravity.CENTER);
 
         ImageView image = new ImageView(this);
-        image.setLayoutParams(lparams);
+        image.setImageResource(R.drawable.liu_logo);
 
+        RadioButton rbutton6 = new RadioButton(this);
+        rbutton6.setText("Ja");
+        RadioButton rbutton7 = new RadioButton(this);
+        rbutton7.setText("Nej");
 
+        RadioGroup group3 = new RadioGroup(this);
+        group3.setLayoutParams(params);
+        group3.setOrientation(LinearLayout.HORIZONTAL);
+        group3.addView(rbutton6);
+        group3.addView(rbutton7);
 
-//        image.setImageResource(getResourceE);
         Button button = new Button(this);
         button.setText("Skicka in");
-        button.setLayoutParams(lparams);
+        button.setLayoutParams(params);
 
 
         layout.addView(text1);
@@ -84,6 +95,11 @@ public class MainActivity_3 extends Activity {
 
         layout.addView(text2);
         layout.addView(group2);
+
+        layout.addView(image);
+        layout.addView(text3);
+        layout.addView(group3);
+
         layout.addView(button);
 
         setContentView(layout);
