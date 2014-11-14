@@ -18,8 +18,6 @@ public class MainActivity_3 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       // setContentView(R.layout.activity_main_3);
-
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.setLayoutParams(new LinearLayout.LayoutParams(
@@ -46,6 +44,7 @@ public class MainActivity_3 extends Activity {
 
         text1.setLayoutParams(lparams);
         layout.addView(text1);
+        setContentView(layout);
 
     }
 
