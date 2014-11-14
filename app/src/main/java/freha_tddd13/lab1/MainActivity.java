@@ -42,7 +42,8 @@ public class MainActivity extends Activity {
 
         // MultiLine
         EditText multiLine = new EditText(this);
-        multiLine.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        multiLine.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        multiLine.setText("SKRIV HÄR LÖL");
 
         linearLayout.addView(button);
         linearLayout.addView(textField1);
