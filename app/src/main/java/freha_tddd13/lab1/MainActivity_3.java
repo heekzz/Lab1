@@ -85,10 +85,10 @@ public class MainActivity_3 extends Activity {
         group3.addView(rbutton6);
         group3.addView(rbutton7);
 
+        //rad 4 - knapp
         Button button = new Button(this);
         button.setText("Skicka in");
         button.setLayoutParams(params);
-
 
         layout.addView(text1);
         layout.addView(group1);
