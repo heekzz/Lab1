@@ -24,92 +24,76 @@ public class MainActivity_2 extends Activity {
         layout.setLayoutParams(new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT));
-        layout.setPadding(20,20,20,20);
+        layout.setPadding(20,20,0,0);
 
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
 
         float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,60, getResources().getDisplayMetrics());
 
         LinearLayout l1 = new LinearLayout(this);
         l1.setOrientation(LinearLayout.HORIZONTAL);
-        l1.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
+        l1.setLayoutParams(params);
 
         TextView name = new TextView(this);
         name.setText("Namn");
-        name.setLayoutParams(params);
+//        name.setLayoutParams(params);
 //        name.setTextAppearance(this, android.R.style.TextAppearance_Large);
         name.setWidth((int)px);
 
 
         EditText inputname = new EditText(this);
-        inputname.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
+        inputname.setLayoutParams(params);
 
         l1.addView(name);
         l1.addView(inputname);
 
         LinearLayout l2 = new LinearLayout(this);
         l2.setOrientation(LinearLayout.HORIZONTAL);
-        l2.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
+        l2.setLayoutParams(params);
 
         TextView pass = new TextView(this);
         pass.setText("Lösenord");
-        pass.setLayoutParams(params);
+//        pass.setLayoutParams(params);
 //        pass.setTextAppearance(this, android.R.style.TextAppearance_Large);
         pass.setWidth((int)px);
 
         EditText inputpass = new EditText(this);
-        inputpass.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
+        inputpass.setLayoutParams(params);
         inputpass.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
         l2.addView(pass);
         l2.addView(inputpass);
 
         LinearLayout l3 = new LinearLayout(this);
         l3.setOrientation(LinearLayout.HORIZONTAL);
-        l3.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
+        l3.setLayoutParams(params);
 
         TextView email = new TextView(this);
         email.setText("Email");
-        email.setLayoutParams(params);
+//        email.setLayoutParams(params);
 //        email.setTextAppearance(this, android.R.style.TextAppearance_Large);
         email.setWidth((int)px);
 
 
         EditText inputemail = new EditText(this);
-        inputemail.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
+        inputemail.setLayoutParams(params);
         inputemail.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
         l3.addView(email);
         l3.addView(inputemail);
 
         LinearLayout l4 = new LinearLayout(this);
         l3.setOrientation(LinearLayout.HORIZONTAL);
-        l3.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
+        l3.setLayoutParams(params);
 
         TextView age = new TextView(this);
         age.setText("Ålder");
-        age.setLayoutParams(params);
+//        age.setLayoutParams(params);
 //        age.setTextAppearance(this, android.R.style.TextAppearance_Large);
         age.setWidth((int)px);
 
         SeekBar seek = new SeekBar(this);
-        seek.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT));
+        seek.setLayoutParams(params);
         l4.addView(age);
         l4.addView(seek);
 
