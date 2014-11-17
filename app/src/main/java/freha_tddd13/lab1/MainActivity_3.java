@@ -30,9 +30,24 @@ public class MainActivity_3 extends Activity {
 
         //rad 1 - hur trivs du på LIU
         TextView text1 = new TextView(this);
-        text1.setText("Hur trivs du på LIU");
+        text1.setText("Hur trivs du på LiU");
         text1.setLayoutParams(params);
         text1.setGravity(Gravity.CENTER);
+//
+//        LinearLayout l1 = new LinearLayout(this);
+//        l1.setLayoutParams(params);
+//        l1.setOrientation(LinearLayout.HORIZONTAL);
+//
+//        CheckBox bra = new CheckBox(this);
+//        bra.setText("Bra");
+//        CheckBox mybra = new CheckBox(this);
+//        mybra.setText("Mycket Bra");
+//        CheckBox jbra = new CheckBox(this);
+//        jbra.setText("Jättebra");
+//
+//        l1.addView(bra);
+//        l1.addView(mybra);
+//        l1.addView(jbra);
 
         RadioButton rbutton = new RadioButton(this);
         rbutton.setText("Bra");
@@ -50,7 +65,7 @@ public class MainActivity_3 extends Activity {
 
         //rad 2 - Läser du på LITH
         TextView text2 = new TextView(this);
-        text2.setText("Läser du på LITH");
+        text2.setText("Läser du på LiTH");
         text2.setLayoutParams(params);
         text2.setGravity(Gravity.CENTER);
 
@@ -67,12 +82,15 @@ public class MainActivity_3 extends Activity {
 
         //rad 3 - LOGO
         TextView text3 = new TextView(this);
-        text3.setText("Är detta LIUs logotyp");
+        text3.setText("Är detta LiUs logotyp");
         text3.setLayoutParams(params);
         text3.setGravity(Gravity.CENTER);
 
-        ImageView image = new ImageView(this);
-        image.setImageResource(R.drawable.liu_logo);
+        ImageView logo = new ImageView(this);
+        logo.setImageResource(R.drawable.logo);
+        logo.setMinimumWidth(500);
+        logo.setMinimumHeight(500);
+
 
         RadioButton rbutton6 = new RadioButton(this);
         rbutton6.setText("Ja");
@@ -85,10 +103,10 @@ public class MainActivity_3 extends Activity {
         group3.addView(rbutton6);
         group3.addView(rbutton7);
 
+        //rad 4 - knapp
         Button button = new Button(this);
         button.setText("Skicka in");
         button.setLayoutParams(params);
-
 
         layout.addView(text1);
         layout.addView(group1);
@@ -96,7 +114,7 @@ public class MainActivity_3 extends Activity {
         layout.addView(text2);
         layout.addView(group2);
 
-        layout.addView(image);
+        layout.addView(logo);
         layout.addView(text3);
         layout.addView(group3);
 

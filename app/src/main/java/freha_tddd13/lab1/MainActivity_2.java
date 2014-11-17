@@ -2,9 +2,10 @@ package freha_tddd13.lab1;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.InputType;
+import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
@@ -16,81 +17,93 @@ public class MainActivity_2 extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main_2);
+//        setContentView(R.layout.activity_main_2);
 
-        LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        param.setMargins(0, 10, 0, 0);
+        LinearLayout layout = new LinearLayout(this);
+        layout.setOrientation(LinearLayout.VERTICAL);
+        layout.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT));
+        layout.setPadding(20,20,0,0);
 
-        LinearLayout.LayoutParams param_e = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
 
-        // Main layout (Background)
-        LinearLayout mainLayout = new LinearLayout(this);
-        mainLayout.setOrientation(LinearLayout.HORIZONTAL);
-        mainLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,60, getResources().getDisplayMetrics());
 
-        // Left col
-        LinearLayout leftCol = new LinearLayout(this);
-        leftCol.setOrientation(LinearLayout.VERTICAL);
-        leftCol.setLayoutParams(new LinearLayout.LayoutParams(70, LinearLayout.LayoutParams.MATCH_PARENT));
+        LinearLayout l1 = new LinearLayout(this);
+        l1.setOrientation(LinearLayout.HORIZONTAL);
+        l1.setLayoutParams(params);
 
-        // Right col
-        LinearLayout rightCol = new LinearLayout(this);
-        rightCol.setOrientation(LinearLayout.VERTICAL);
-        rightCol.setLayoutParams(new LinearLayout.LayoutParams(180, LinearLayout.LayoutParams.MATCH_PARENT));
-
-        // Namn text
         TextView name = new TextView(this);
-        name.setText("Namn:");
-        name.setLayoutParams(param);
+        name.setText("Namn");
+//        name.setLayoutParams(params);
+//        name.setTextAppearance(this, android.R.style.TextAppearance_Large);
+        name.setWidth((int)px);
 
-        // Lösenord text
-        TextView password = new TextView(this);
-        password.setText("Lösenord:");
-        password.setLayoutParams(param);
 
-        // E-mail text
+        EditText inputname = new EditText(this);
+        inputname.setLayoutParams(params);
+
+        l1.addView(name);
+        l1.addView(inputname);
+
+        LinearLayout l2 = new LinearLayout(this);
+        l2.setOrientation(LinearLayout.HORIZONTAL);
+        l2.setLayoutParams(params);
+
+        TextView pass = new TextView(this);
+        pass.setText("Lösenord");
+//        pass.setLayoutParams(params);
+//        pass.setTextAppearance(this, android.R.style.TextAppearance_Large);
+        pass.setWidth((int)px);
+
+        EditText inputpass = new EditText(this);
+        inputpass.setLayoutParams(params);
+        inputpass.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
+        l2.addView(pass);
+        l2.addView(inputpass);
+
+        LinearLayout l3 = new LinearLayout(this);
+        l3.setOrientation(LinearLayout.HORIZONTAL);
+        l3.setLayoutParams(params);
+
         TextView email = new TextView(this);
-        email.setText("Email:");
-        email.setLayoutParams(param);
+        email.setText("Email");
+//        email.setLayoutParams(params);
+//        email.setTextAppearance(this, android.R.style.TextAppearance_Large);
+        email.setWidth((int)px);
 
-        // Ålder text
+
+        EditText inputemail = new EditText(this);
+        inputemail.setLayoutParams(params);
+        inputemail.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+        l3.addView(email);
+        l3.addView(inputemail);
+
+        LinearLayout l4 = new LinearLayout(this);
+        l3.setOrientation(LinearLayout.HORIZONTAL);
+        l3.setLayoutParams(params);
+
         TextView age = new TextView(this);
-        age.setText("Ålder:");
-        age.setLayoutParams(param);
+        age.setText("Ålder");
+//        age.setLayoutParams(params);
+//        age.setTextAppearance(this, android.R.style.TextAppearance_Large);
+        age.setWidth((int)px);
 
-        // Namn fält
-        EditText name_e = new EditText(this);
-        name_e.setLayoutParams(param_e);
+        SeekBar seek = new SeekBar(this);
+        seek.setLayoutParams(params);
+        l4.addView(age);
+        l4.addView(seek);
 
-        // Lösenord fält
-        EditText password_e = new EditText(this);
-        password_e.setLayoutParams(param_e);
+        layout.addView(l1);
+        layout.addView(l2);
+        layout.addView(l3);
+        layout.addView(l4);
 
-        // E-mail fält
-        EditText email_e = new EditText(this);
-        email_e.setLayoutParams(param_e);
-
-        // Ålder reglage
-        SeekBar age_e = new SeekBar(this);
-        age_e.setLayoutParams(param_e);
-
-
-        leftCol.addView(name);
-        leftCol.addView(password);
-        leftCol.addView(email);
-        leftCol.addView(age);
-
-        rightCol.addView(name_e);
-        rightCol.addView(password_e);
-        rightCol.addView(email_e);
-        rightCol.addView(age_e);
-
-        mainLayout.addView(leftCol);
-        mainLayout.addView(rightCol);
-
-        setContentView(mainLayout);
+        setContentView(layout);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
