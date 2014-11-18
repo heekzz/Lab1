@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+//        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_2);
 
         // Layout
@@ -37,11 +37,10 @@ public class MainActivity extends Activity {
         button.setText("Knapp");
         button.setLayoutParams(params);
 
-        // Text Filed 1 line
+        // Text Field 1 line
         EditText textField1 = new EditText(this);
         textField1.setLayoutParams(params);
         textField1.setInputType(InputType.TYPE_CLASS_TEXT);
-//        textField1.setMaxLines(1);
         textField1.setHint("Skriv här");
 
         // Ratingbar
@@ -59,7 +58,7 @@ public class MainActivity extends Activity {
         linearLayout.addView(rate);
         linearLayout.addView(multiLine);
 
-//        setContentView(linearLayout);
+        setContentView(linearLayout);
     }
 
 
