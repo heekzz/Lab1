@@ -3,6 +3,8 @@ package freha_tddd13.lab1;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.InputType;
+import android.text.Layout;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,38 +20,46 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_2);
 
         // Layout
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
+        linearLayout.setGravity(Gravity.CENTER|Gravity.TOP);
         linearLayout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
 
         // Button
         Button button = new Button(this);
-        button.setText("Knappeliknapp");
-        button.setLayoutParams(new ActionBar.LayoutParams(ActionBar.LayoutParams.MATCH_PARENT, ActionBar.LayoutParams.WRAP_CONTENT));
+        button.setText("Knapp");
+        button.setLayoutParams(params);
 
         // Text Filed 1 line
         EditText textField1 = new EditText(this);
-        textField1.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        textField1.setMaxLines(1);
+        textField1.setLayoutParams(params);
+        textField1.setInputType(InputType.TYPE_CLASS_TEXT);
+//        textField1.setMaxLines(1);
+        textField1.setHint("Skriv här");
 
         // Ratingbar
         RatingBar rate = new RatingBar(this);
-        rate.setLayoutParams(new ActionBar.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        rate.setLayoutParams(new ActionBar.LayoutParams(Gravity.CENTER_HORIZONTAL));
-
+        rate.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+        rate.setNumStars(5);
         // MultiLine
         EditText multiLine = new EditText(this);
-        multiLine.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-        multiLine.setText("SKRIV HÄR LÖL");
+        multiLine.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        multiLine.setGravity(Gravity.BOTTOM);
+        multiLine.setHint("Skriv här");
 
         linearLayout.addView(button);
         linearLayout.addView(textField1);
         linearLayout.addView(rate);
         linearLayout.addView(multiLine);
-        setContentView(linearLayout);
+
+//        setContentView(linearLayout);
     }
 
 
