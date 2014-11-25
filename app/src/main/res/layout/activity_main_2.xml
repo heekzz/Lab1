@@ -1,105 +1,107 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="freha_tddd13.lab1.MainActivity_2"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="horizontal"
-    android:gravity="top">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:transitionGroup="true">
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="84dp"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/Text">
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Namn"
+            android:id="@+id/name"
+            android:width="70dp" />
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Namn"
-                android:id="@+id/name"
-                android:layout_marginTop="20dp"
-                android:textColor="#999C95" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputName"
+            android:layout_weight="1" />
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Lösenord"
-                android:id="@+id/password"
-                android:layout_marginTop="20dp"
-                android:textColor="#999C95" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="E-post"
-                android:id="@+id/Email"
-                android:layout_marginTop="20dp"
-                android:textColor="#999C95" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="30dp"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Ålder"
-                android:id="@+id/Age"
-                android:layout_weight="0.11"
-                android:layout_marginTop="20dp"
-                android:textColor="#999C95" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentTop="true"
-            android:id="@+id/Forms"
-            android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Lösenord"
+            android:id="@+id/pass"
+            android:width="70dp" />
 
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/NameField"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"/>
-                <!--android:layout_marginTop="10dp" />-->
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/inputPass"
+            android:layout_weight="1" />
+    </LinearLayout>
 
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:ems="10"
-                android:id="@+id/PwField"
-                android:layout_below="@+id/linearLayout"
-                android:layout_alignParentLeft="true"
-                android:layout_marginTop="10dp"
-                android:password="true" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical">
 
-            <EditText
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"
-                android:ems="10"
-                android:id="@+id/EmailField"
-                android:layout_marginTop="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Epost"
+            android:id="@+id/mail"
+            android:width="70dp" />
 
-            <SeekBar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/seekBar"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inputMail"
+            android:layout_weight="1"
+            android:inputType="textEmailAddress"/>
+    </LinearLayout>
 
-        </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_vertical">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Ålder"
+            android:id="@+id/age"
+            android:width="70dp" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBar"
+            android:layout_weight="1" />
+    </LinearLayout>
 </LinearLayout>

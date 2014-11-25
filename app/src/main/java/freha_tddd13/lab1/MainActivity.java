@@ -19,8 +19,8 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_2);
+        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_main_2);
 
         // Layout
         LinearLayout linearLayout = new LinearLayout(this);
