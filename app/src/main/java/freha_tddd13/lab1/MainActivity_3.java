@@ -34,21 +34,6 @@ public class MainActivity_3 extends Activity {
         text1.setText("Hur trivs du på LiU");
         text1.setLayoutParams(params);
         text1.setGravity(Gravity.CENTER);
-//
-//        LinearLayout l1 = new LinearLayout(this);
-//        l1.setLayoutParams(params);
-//        l1.setOrientation(LinearLayout.HORIZONTAL);
-//
-//        CheckBox bra = new CheckBox(this);
-//        bra.setText("Bra");
-//        CheckBox mybra = new CheckBox(this);
-//        mybra.setText("Mycket Bra");
-//        CheckBox jbra = new CheckBox(this);
-//        jbra.setText("Jättebra");
-//
-//        l1.addView(bra);
-//        l1.addView(mybra);
-//        l1.addView(jbra);
 
         RadioButton rbutton = new RadioButton(this);
         rbutton.setText("Bra");
