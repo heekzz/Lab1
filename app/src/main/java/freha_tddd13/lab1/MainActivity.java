@@ -1,10 +1,7 @@
 package freha_tddd13.lab1;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
-import android.text.InputType;
-import android.text.Layout;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,13 +38,13 @@ public class MainActivity extends Activity {
         EditText textField1 = new EditText(this);
         textField1.setLayoutParams(params);
         textField1.setSingleLine();
-//        textField1.setInputType(InputType.TYPE_CLASS_TEXT);
         textField1.setHint("Skriv här");
 
         // Ratingbar
         RatingBar rate = new RatingBar(this);
         rate.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         rate.setNumStars(5);
+
         // MultiLine
         EditText multiLine = new EditText(this);
         multiLine.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
