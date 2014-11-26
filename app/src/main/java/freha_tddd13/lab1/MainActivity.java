@@ -37,10 +37,11 @@ public class MainActivity extends Activity {
         button.setText("Knapp");
         button.setLayoutParams(params);
 
-        // Text Field 1 line
+        // Text Field
         EditText textField1 = new EditText(this);
         textField1.setLayoutParams(params);
-        textField1.setInputType(InputType.TYPE_CLASS_TEXT);
+        textField1.setSingleLine();
+//        textField1.setInputType(InputType.TYPE_CLASS_TEXT);
         textField1.setHint("Skriv här");
 
         // Ratingbar

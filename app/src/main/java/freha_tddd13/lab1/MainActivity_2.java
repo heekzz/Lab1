@@ -30,7 +30,6 @@ public class MainActivity_2 extends Activity {
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT);
 
-//        float px = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,60, getResources().getDisplayMetrics());
 
         LinearLayout l1 = new LinearLayout(this);
         l1.setOrientation(LinearLayout.HORIZONTAL);
@@ -38,11 +37,10 @@ public class MainActivity_2 extends Activity {
 
         TextView name = new TextView(this);
         name.setText("Namn");
-//        name.setLayoutParams(params);
-//        name.setWidth((int)px);
         name.setWidth(200);
 
         EditText inputname = new EditText(this);
+        inputname.setInputType(InputType.TYPE_CLASS_TEXT);
         inputname.setLayoutParams(params);
 
         l1.addView(name);
@@ -54,13 +52,12 @@ public class MainActivity_2 extends Activity {
 
         TextView pass = new TextView(this);
         pass.setText("Lösenord");
-//        pass.setLayoutParams(params);
-//        pass.setWidth((int)px);
         pass.setWidth(200);
 
         EditText inputpass = new EditText(this);
         inputpass.setLayoutParams(params);
         inputpass.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
         l2.addView(pass);
         l2.addView(inputpass);
 
@@ -70,13 +67,11 @@ public class MainActivity_2 extends Activity {
 
         TextView email = new TextView(this);
         email.setText("Email");
-//        email.setLayoutParams(params);
-//        email.setWidth((int)px);
         email.setWidth(200);
-
         EditText inputemail = new EditText(this);
         inputemail.setLayoutParams(params);
         inputemail.setInputType(InputType.TYPE_CLASS_TEXT|InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+
         l3.addView(email);
         l3.addView(inputemail);
 
@@ -86,12 +81,11 @@ public class MainActivity_2 extends Activity {
 
         TextView age = new TextView(this);
         age.setText("Ålder");
-//        age.setLayoutParams(params);
-//        age.setWidth((int)px);
         age.setWidth(200);
 
         SeekBar seek = new SeekBar(this);
         seek.setLayoutParams(params);
+
         l4.addView(age);
         l4.addView(seek);
 
